@@ -1,0 +1,61 @@
+:root {
+  --ameixa: #2b1745; --lavanda: #f3eff7; --gel: #ff4f8b; --menta: #bff0dc; --linha: #dcd2e6; --branco: #fff;
+  --titulo: 'Bricolage Grotesque', sans-serif; --texto: 'Figtree', sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--texto); background: var(--lavanda); color: var(--ameixa); line-height: 1.55; }
+h1, h2, h3, .marca { font-family: var(--titulo); line-height: 1.1; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--gel); outline-offset: 2px; }
+
+.topo { display: flex; justify-content: space-between; align-items: center; padding: 14px 6vw; background: var(--ameixa); color: var(--branco); }
+.marca { font-size: 1.3rem; font-weight: 800; }
+.pagina { max-width: 880px; margin: 0 auto; padding: 40px 6vw 80px; }
+
+.btn { background: var(--gel); color: var(--branco); border: 0; border-radius: 999px; padding: 12px 28px; font-weight: 600; }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.grande { padding: 16px 40px; font-size: 1.1rem; }
+.link { background: none; border: 0; color: var(--gel); font-weight: 600; text-decoration: underline; padding: 4px 8px; }
+.topo .link { color: var(--menta); }
+.erro { color: #b3123f; font-weight: 500; }
+.vazio { color: #6b5a80; }
+
+/* Login */
+.login { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
+.login-arte { background: var(--ameixa); display: flex; align-items: flex-end; justify-content: center; gap: 14px; padding: 0 8%; }
+.unha { width: 70px; border-radius: 35px 35px 8px 8px; display: block; }
+.u1 { height: 240px; background: var(--gel); } .u2 { height: 320px; background: var(--menta); }
+.u3 { height: 280px; background: #e9d5ff; } .u4 { height: 210px; background: var(--gel); opacity: .7; }
+.login-form { align-self: center; justify-self: center; width: min(380px, 88%); display: grid; gap: 16px; }
+.login-form h1 { font-size: 3rem; margin: 0; font-weight: 800; }
+.login-form p { margin: 0; }
+label { display: grid; gap: 6px; font-weight: 500; }
+input { font: inherit; padding: 12px 14px; border: 1.5px solid var(--linha); border-radius: 10px; background: var(--branco); color: var(--ameixa); }
+
+/* Cliente */
+.hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; max-width: 14ch; margin: 0 0 20px; }
+.sobre { max-width: 62ch; margin-bottom: 28px; }
+.agendar { background: var(--branco); border-radius: 18px; padding: 28px; margin: 40px 0; }
+.agendar h3 { margin: 28px 0 10px; font-size: 1.1rem; }
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.cartao { text-align: left; display: grid; gap: 4px; padding: 14px; background: var(--lavanda); border: 2px solid transparent; border-radius: 14px; color: inherit; }
+.cartao small { color: #6b5a80; }
+.cartao.sel, .hora.sel { border-color: var(--gel); background: #ffe3ee; }
+.horas { display: flex; flex-wrap: wrap; gap: 10px; }
+.hora { padding: 10px 18px; border-radius: 10px; border: 2px solid var(--linha); background: var(--branco); color: inherit; }
+.hora:disabled { background: var(--lavanda); color: #b5a8c4; text-decoration: line-through; cursor: not-allowed; }
+.acoes { margin-top: 28px; display: flex; align-items: center; gap: 12px; }
+
+/* Listas */
+.lista { margin-top: 48px; }
+.lista h2 { font-size: 1.6rem; }
+.linha { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--linha); }
+.tag { padding: 3px 12px; border-radius: 999px; font-size: .85rem; font-weight: 600; background: var(--linha); }
+.tag.confirmado { background: var(--menta); } .tag.cancelado { background: #f5c9d6; }
+.form-servico { display: grid; gap: 10px; margin-top: 24px; max-width: 420px; }
+
+@media (max-width: 720px) {
+  .login { grid-template-columns: 1fr; } .login-arte { height: 180px; }
+  .unha { width: 44px; } .u1 { height: 100px } .u2 { height: 150px } .u3 { height: 120px } .u4 { height: 90px }
+  .linha { flex-wrap: wrap; }
+}
